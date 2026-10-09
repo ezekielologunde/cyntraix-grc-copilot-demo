@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Cyntraix GRC copilot demo: three policy-to-control mapping methods compared on one synthetic policy, every citation checked against the source text by code.">
+<title>GRC Copilot Demo | Cyntraix</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <div class="brand"><span class="brandmark">G</span>Cyntraix<span class="brandlight">GRC</span></div>
+  <div class="header-meta"><span class="live-dot"></span>Replay of a real recorded run <span class="sep">/</span> no live model call from this page</div>
+  <a href="https://github.com/ezekielologunde/cyntraix-grc-copilot-demo" target="_blank" rel="noopener">Source &amp; design notes &#8599;</a>
+</header>
+<main>
+  <section class="intro">
+    <div class="eyebrow">POLICY CLAUSE &rarr; SUGGESTED CONTROL &rarr; VERIFIED CITATION</div>
+    <h1>Three mapping methods, one synthetic policy, every citation checked.</h1>
+    <p class="lede" id="run-meta">Loading run metadata&hellip;</p>
+    <p class="lede">Every number on this page comes from <code>reports/latest.json</code>, a committed output of a real run against local Ollama models. A suggested mapping is never trusted on its own claim &mdash; only the model-assisted method can generate free text, and this runner checks its quoted citation against the actual clause text before counting it as verified.</p>
+  </section>
+
+  <section class="summary-grid" id="summary-grid"></section>
+
+  <section class="policy-section">
+    <h2>The policy under review</h2>
+    <p class="lede small" id="policy-meta"></p>
+    <div id="policy-list"></div>
+  </section>
+
+  <section class="controls-section">
+    <h2>The control subset</h2>
+    <p class="lede small" id="framework-meta"></p>
+    <div id="controls-list"></div>
+  </section>
+
+  <section class="mapping-section">
+    <h2>Clause-by-clause mapping comparison</h2>
+    <p class="lede small">Accept, edit, or reject each suggestion below. Decisions stay in your browser only &mdash; nothing is submitted anywhere.</p>
+    <div id="mapping-list"></div>
+    <button class="button secondary" id="export-decisions">Export my review decisions (JSON)</button>
+  </section>
+
+  <section class="finding">
+    <h2>What the real run showed</h2>
+    <p id="finding-text">Loading&hellip;</p>
+  </section>
+</main>
+<footer>
+  <p>Part of a small applied-AI portfolio alongside <a href="https://soc-review.vercel.app" target="_blank" rel="noopener">SOC Review</a>, <a href="https://ezekielologunde.github.io/rowmio-mastery-demo/" target="_blank" rel="noopener">Rowmio Mastery</a>, and <a href="https://ezekielologunde.github.io/agent-security-eval/" target="_blank" rel="noopener">Agent Security Eval</a>.</p>
+</footer>
+<script type="module" src="app.js"></script>
+</body>
+</html>

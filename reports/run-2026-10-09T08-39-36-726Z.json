@@ -1,0 +1,319 @@
+{
+  "policy": {
+    "id": "acme-access-control-policy",
+    "version": "v1.0 (synthetic, 2026-10-09)",
+    "sourceHash": "b8034e841700f7fe"
+  },
+  "framework": {
+    "id": "nist-800-53-rev5",
+    "version": "Rev. 5 (2020-09-23), eight-control demo subset"
+  },
+  "embedModel": "nomic-embed-text",
+  "chatModel": "qwen2.5-3b-cpu4",
+  "startedAt": "2026-10-09T08:39:36.726Z",
+  "finishedAt": "2026-10-09T08:48:47.436Z",
+  "clauseCount": 8,
+  "summary": {
+    "byMethod": {
+      "keyword": {
+        "clauses": 8,
+        "abstainedCount": 0,
+        "citationVerifiedRate": 1,
+        "noMatchRate": 0
+      },
+      "retrieval": {
+        "clauses": 8,
+        "abstainedCount": 0,
+        "citationVerifiedRate": 1,
+        "noMatchRate": 0
+      },
+      "model_assisted": {
+        "clauses": 8,
+        "abstainedCount": 0,
+        "citationVerifiedRate": 0.75,
+        "noMatchRate": 0
+      }
+    },
+    "crossMethodAgreementRate": 0.75
+  },
+  "results": [
+    {
+      "clauseId": "P-1",
+      "clauseText": "All user accounts must be uniquely identified and authenticated before being granted access to any production system.",
+      "keyword": {
+        "method": "keyword",
+        "controlId": "IA-2",
+        "score": 5,
+        "citedPassage": "All user accounts must be uniquely identified and authenticated before being granted access to any production system.",
+        "matchedWords": [
+          "user",
+          "uniquely",
+          "before",
+          "access",
+          "system"
+        ],
+        "abstained": false
+      },
+      "retrieval": {
+        "method": "retrieval",
+        "controlId": "IA-2",
+        "score": 0.8057065566965709,
+        "citedPassage": "All user accounts must be uniquely identified and authenticated before being granted access to any production system.",
+        "abstained": false
+      },
+      "model_assisted": {
+        "method": "model_assisted",
+        "controlId": "IA-2",
+        "confidence": 1,
+        "citedPassage": "All user accounts must be uniquely identified and authenticated before being granted access to any production system.",
+        "citationVerified": true,
+        "invalidControlId": false,
+        "raw": "{\"controlId\": \"IA-2\", \"confidence\": 1, \"quote\": \"All user accounts must be uniquely identified and authenticated before being granted access to any production system.\"}",
+        "latencyMs": 67311,
+        "abstained": false
+      }
+    },
+    {
+      "clauseId": "P-2",
+      "clauseText": "Access to production systems must be restricted to the minimum set of permissions required for a user's job role, reviewed quarterly by the resource owner.",
+      "keyword": {
+        "method": "keyword",
+        "controlId": "AC-6",
+        "score": 4,
+        "citedPassage": "Access to production systems must be restricted to the minimum set of permissions required for a user's job role, reviewed quarterly by the resource owner.",
+        "matchedWords": [
+          "minimum",
+          "permissions",
+          "user",
+          "reviewed"
+        ],
+        "abstained": false
+      },
+      "retrieval": {
+        "method": "retrieval",
+        "controlId": "AC-6",
+        "score": 0.7695266576159168,
+        "citedPassage": "Access to production systems must be restricted to the minimum set of permissions required for a user's job role, reviewed quarterly by the resource owner.",
+        "abstained": false
+      },
+      "model_assisted": {
+        "method": "model_assisted",
+        "controlId": "AC-6",
+        "confidence": 0.9,
+        "citedPassage": "Access to production systems must be restricted to the minimum set of permissions required for a user's job role, reviewed quarterly by the resource owner.",
+        "citationVerified": true,
+        "invalidControlId": false,
+        "raw": "{\"controlId\": \"AC-6\", \"confidence\": 0.9, \"quote\": \"Access to production systems must be restricted to the minimum set of permissions required for a user's job role, reviewed quarterly by the resource owner.\"}",
+        "latencyMs": 86062,
+        "abstained": false
+      }
+    },
+    {
+      "clauseId": "P-3",
+      "clauseText": "Failed login attempts must be limited to five consecutive tries, after which the account is locked for a minimum of fifteen minutes.",
+      "keyword": {
+        "method": "keyword",
+        "controlId": "AC-7",
+        "score": 4,
+        "citedPassage": "Failed login attempts must be limited to five consecutive tries, after which the account is locked for a minimum of fifteen minutes.",
+        "matchedWords": [
+          "attempts",
+          "consecutive",
+          "after",
+          "account"
+        ],
+        "abstained": false
+      },
+      "retrieval": {
+        "method": "retrieval",
+        "controlId": "AC-7",
+        "score": 0.8149444196862554,
+        "citedPassage": "Failed login attempts must be limited to five consecutive tries, after which the account is locked for a minimum of fifteen minutes.",
+        "abstained": false
+      },
+      "model_assisted": {
+        "method": "model_assisted",
+        "controlId": "AC-7",
+        "confidence": 0.95,
+        "citedPassage": "Failed login attempts must be limited to five consecutive tries, after which the account is locked for a minimum of fifteen minutes.",
+        "citationVerified": true,
+        "invalidControlId": false,
+        "raw": "{\"controlId\": \"AC-7\", \"confidence\": 0.95, \"quote\": \"Failed login attempts must be limited to five consecutive tries, after which the account is locked for a minimum of fifteen minutes.\"}",
+        "latencyMs": 58911,
+        "abstained": false
+      }
+    },
+    {
+      "clauseId": "P-4",
+      "clauseText": "All remote access to internal systems must be established through an approved, encrypted connection, and sessions must time out after thirty minutes of inactivity.",
+      "keyword": {
+        "method": "keyword",
+        "controlId": "AC-17",
+        "score": 2,
+        "citedPassage": "All remote access to internal systems must be established through an approved, encrypted connection, and sessions must time out after thirty minutes of inactivity.",
+        "matchedWords": [
+          "remote",
+          "access"
+        ],
+        "abstained": false
+      },
+      "retrieval": {
+        "method": "retrieval",
+        "controlId": "AC-17",
+        "score": 0.783420295658184,
+        "citedPassage": "All remote access to internal systems must be established through an approved, encrypted connection, and sessions must time out after thirty minutes of inactivity.",
+        "abstained": false
+      },
+      "model_assisted": {
+        "method": "model_assisted",
+        "controlId": "AC-17",
+        "confidence": 0.9,
+        "citedPassage": "All remote access to internal systems must be established through an approved, encrypted connection, and sessions must time out after thirty minutes of inactivity.",
+        "citationVerified": true,
+        "invalidControlId": false,
+        "raw": "{\"controlId\": \"AC-17\", \"confidence\": 0.9, \"quote\": \"All remote access to internal systems must be established through an approved, encrypted connection, and sessions must time out after thirty minutes of inactivity.\"}",
+        "latencyMs": 73499,
+        "abstained": false
+      }
+    },
+    {
+      "clauseId": "P-5",
+      "clauseText": "Administrator and other privileged accounts must be separate from standard user accounts and used only when elevated access is required for a specific task.",
+      "keyword": {
+        "method": "keyword",
+        "controlId": "IA-2",
+        "score": 2,
+        "citedPassage": "Administrator and other privileged accounts must be separate from standard user accounts and used only when elevated access is required for a specific task.",
+        "matchedWords": [
+          "user",
+          "access"
+        ],
+        "abstained": false
+      },
+      "retrieval": {
+        "method": "retrieval",
+        "controlId": "AC-2",
+        "score": 0.742742516756888,
+        "citedPassage": "Administrator and other privileged accounts must be separate from standard user accounts and used only when elevated access is required for a specific task.",
+        "abstained": false
+      },
+      "model_assisted": {
+        "method": "model_assisted",
+        "controlId": "AC-2",
+        "confidence": 0.9,
+        "citedPassage": "Administrator and other privileged accounts must be separate from standard user accounts and used only when elevated access is required for a specific task.",
+        "citationVerified": true,
+        "invalidControlId": false,
+        "raw": "{\"controlId\": \"AC-2\", \"confidence\": 0.9, \"quote\": \"Administrator and other privileged accounts must be separate from standard user accounts and used only when elevated access is required for a specific task.\"}",
+        "latencyMs": 63442,
+        "abstained": false
+      }
+    },
+    {
+      "clauseId": "P-6",
+      "clauseText": "Terminated employees must have all system access revoked within one business day of their departure date.",
+      "keyword": {
+        "method": "keyword",
+        "controlId": "IA-2",
+        "score": 2,
+        "citedPassage": "Terminated employees must have all system access revoked within one business day of their departure date.",
+        "matchedWords": [
+          "system",
+          "access"
+        ],
+        "abstained": false
+      },
+      "retrieval": {
+        "method": "retrieval",
+        "controlId": "PS-4",
+        "score": 0.7907879073681925,
+        "citedPassage": "Terminated employees must have all system access revoked within one business day of their departure date.",
+        "abstained": false
+      },
+      "model_assisted": {
+        "method": "model_assisted",
+        "controlId": "PS-4",
+        "confidence": 0.9,
+        "citedPassage": "Terminated employees must have all system access revoked within one business day of their departure date.",
+        "citationVerified": true,
+        "invalidControlId": false,
+        "raw": "{\"controlId\": \"PS-4\", \"confidence\": 0.9, \"quote\": \"Terminated employees must have all system access revoked within one business day of their departure date.\"}",
+        "latencyMs": 74289,
+        "abstained": false
+      }
+    },
+    {
+      "clauseId": "P-7",
+      "clauseText": "All access control decisions, including grants, denials, and revocations, must be logged with enough detail to support an after-the-fact audit.",
+      "keyword": {
+        "method": "keyword",
+        "controlId": "AU-2",
+        "score": 6,
+        "citedPassage": "All access control decisions, including grants, denials, and revocations, must be logged with enough detail to support an after-the-fact audit.",
+        "matchedWords": [
+          "access",
+          "control",
+          "decisions",
+          "including",
+          "support",
+          "audit"
+        ],
+        "abstained": false
+      },
+      "retrieval": {
+        "method": "retrieval",
+        "controlId": "AU-2",
+        "score": 0.731716474747099,
+        "citedPassage": "All access control decisions, including grants, denials, and revocations, must be logged with enough detail to support an after-the-fact audit.",
+        "abstained": false
+      },
+      "model_assisted": {
+        "method": "model_assisted",
+        "controlId": "AU-2",
+        "confidence": 0.9,
+        "citedPassage": "Identify and log organization-defined events, including access control decisions, to support audit and review.",
+        "citationVerified": false,
+        "invalidControlId": false,
+        "raw": "{\"controlId\": \"AU-2\", \"confidence\": 0.9, \"quote\": \"Identify and log organization-defined events, including access control decisions, to support audit and review.\"}",
+        "latencyMs": 61916,
+        "abstained": false
+      }
+    },
+    {
+      "clauseId": "P-8",
+      "clauseText": "New software or hardware must not be installed on company systems without prior review and approval from the IT department.",
+      "keyword": {
+        "method": "keyword",
+        "controlId": "CM-11",
+        "score": 4,
+        "citedPassage": "New software or hardware must not be installed on company systems without prior review and approval from the IT department.",
+        "matchedWords": [
+          "software",
+          "installed",
+          "systems",
+          "without"
+        ],
+        "abstained": false
+      },
+      "retrieval": {
+        "method": "retrieval",
+        "controlId": "CM-11",
+        "score": 0.7345987195425937,
+        "citedPassage": "New software or hardware must not be installed on company systems without prior review and approval from the IT department.",
+        "abstained": false
+      },
+      "model_assisted": {
+        "method": "model_assisted",
+        "controlId": "CM-11",
+        "confidence": 0.9,
+        "citedPassage": "User-Installed Software",
+        "citationVerified": false,
+        "invalidControlId": false,
+        "raw": "{\"controlId\": \"CM-11\", \"confidence\": 0.9, \"quote\": \"User-Installed Software\"}",
+        "latencyMs": 23342,
+        "abstained": false
+      }
+    }
+  ],
+  "disclaimer": "Development-scale run: 8 synthetic policy clauses, eight-control demo subset, one model, one run. Citation-verified rate and cross-method agreement are checkable by code; neither is a precision/recall claim against expert-adjudicated ground truth, and nothing here is a compliance certification."
+}
